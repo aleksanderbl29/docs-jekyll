@@ -9,9 +9,9 @@ tags: [homelab, jekyll, learn]     # TAG names should always be lowercase
 This is my first post
 
 ## Here is a code block
-'''bash
+´´´bash
 sudo apt update
-'''
+´´´
 
 Thanks a lot for reading
 wuhu

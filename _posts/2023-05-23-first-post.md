@@ -10,8 +10,9 @@ This is my first post
 
 ## Here is a code block
 ```console
-sudo apt update
+sudo apt update && sudo apt upgrade -y
 ```
 
 Thanks a lot for reading
-wuhu
+
+WUHU This is a great success

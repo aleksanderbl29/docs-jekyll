@@ -15,4 +15,4 @@ sudo apt update && sudo apt upgrade -y
 
 Thanks a lot for reading
 
-WUHU This is a great success
+WUHU This is a great success!

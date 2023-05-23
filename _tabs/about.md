@@ -10,4 +10,5 @@ order: 4
 This is the about seciton of my jekyll site
 I am very annoyed
 > why am I annoyed?
+{: .prompt-tip }
 # BECAUSE IT DOESNT WORK

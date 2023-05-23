@@ -13,4 +13,4 @@ This is my first post
 sudo apt update
 '''
 
-Thanks for reading
+Thanks a lot for reading

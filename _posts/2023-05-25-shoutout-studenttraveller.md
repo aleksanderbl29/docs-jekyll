@@ -1,6 +1,6 @@
 ---
-title: First post
-date: 2023-05-25 00:10:00 +0200
+title: Shoutout to my favorite travel blog
+date: 2023-05-25 10:00:00 +0200
 categories: [Blog]
 tags: [blog, shoutout]     # TAG names should always be lowercase
 ---

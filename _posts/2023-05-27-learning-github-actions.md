@@ -3,6 +3,7 @@ title: Learning a little Github Actions for my homelab
 date: 2023-05-27 10:00:00 +0200
 categories: [Homelab, Github Actions]
 tags: [homelab, learning, github actions, secrets]     # TAG names should always be lowercase
+mermaid: true
 ---
 In this project wanted to implement an automatic redeployment of my Docker Compose files whenever i change them in Github.
 
@@ -13,6 +14,7 @@ I thought so too! And it actually is.
 ## What you'll need
 For this project to work you will need some things to be setup first.
 * Docker environment with Portainer BE
+* Docker stack deployed in Portainer BE with webhook ready
 * A github repository with your docker-compose files
 
 ## Creating a workflow file
@@ -33,6 +35,7 @@ code .
 ```
 ## What do we need the action to do?
 We need the action to check if there has been any changes to docker-compose.yml and, if yes, call the portainer webhook
+
 ```mermaid
 flowchart TD
     A[Git push to main] --> B[Change to docker-compose?]
@@ -127,5 +130,5 @@ jobs:
       env:
         LITTLELINK_PORTAINER_WEBHOOK: ${{ secrets.LITTLELINK_PORTAINER_WEBHOOK }}
 ```
-I have drawn a lot of inspiration from [Gérald Barré's blog post on the subject](https://www.meziantou.net/executing-github-actions-jobs-or-steps-only-when-specific-files-change.htm).
-### What does this do?
+### Tips and tricks
+* It is a great idea to expose your portainer-instance to the web so that Github Actions can access it. Otherwise you could run the action on a locally hosted runner, but that is way out of the scope of this project

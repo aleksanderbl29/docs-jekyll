@@ -45,3 +45,6 @@ When you have copied your webhook url you can safely click deploy
 
 ## That's it!
 You now have a docker-compose file that redeploys itself when the webhook url is called.
+
+## Documentation used for this guide
+[Portainer docs on webhooks](https://docs.portainer.io/user/docker/stacks/webhooks)

@@ -142,3 +142,8 @@ jobs:
 ```
 ### Tips and tricks
 * It is a great idea to expose your portainer-instance to the web so that Github Actions can access it. Otherwise you could run the action on a locally hosted runner, but that is way out of the scope of this project
+
+## Documentation used for this guide
+[Gérald Barré's blog post on the subject](https://www.meziantou.net/executing-github-actions-jobs-or-steps-only-when-specific-files-change.htm)
+
+[joelwmale's github action](https://github.com/marketplace/actions/webhook-action)

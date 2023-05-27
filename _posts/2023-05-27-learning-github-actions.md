@@ -4,7 +4,6 @@ date: 2023-05-27 10:00:00 +0200
 categories: [Homelab, Github Actions]
 tags: [homelab, learning, github actions, secrets]     # TAG names should always be lowercase
 ---
-# Getting to know Github Actions for my homelab
 In this project wanted to implement an automatic redeployment of my Docker Compose files whenever i change them in Github.
 
 That sounds simple, right?

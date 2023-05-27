@@ -4,6 +4,7 @@ date: 2023-05-27 10:00:00 +0200
 categories: [Homelab, Github Actions]
 tags: [homelab, learning, github actions, secrets]     # TAG names should always be lowercase
 mermaid: true
+img_path: /media/github-actions-webhook-docker/
 ---
 In this project wanted to implement an automatic redeployment of my Docker Compose files whenever i change them in Github.
 
@@ -16,6 +17,26 @@ For this project to work you will need some things to be setup first.
 * Docker environment with Portainer BE
 * Docker stack deployed in Portainer BE with webhook ready
 * A github repository with your docker-compose files
+
+## What do we need the action to do?
+We need the action to check if there has been any changes to docker-compose.yml and, if yes, call the portainer webhook
+
+```mermaid
+flowchart TD
+    A[Git push to main] --> B[Change to docker-compose?]
+    B --> |Yes| C[Call webhook]
+    C --> |In Portainer| D[Redeploy docker-compose.yml]
+    D --> E[Finish job]
+    B --> |No| E[Finish job]
+```
+
+## Creating secrets in the github repository
+For a later step, you will need to have secrets created with your webhook-urls in github. You can do this by going to 'settings', 'secrets and variables', then 'actions' and press 'New repository secret'. The page looks like this:
+
+![Light mode only](secrets-light.png){: .shadow .light}
+![Dark mode only](secrets-dark.png){: .shadow .dark}
+
+On this page you should fill in the webhook url for your service and name the secret appropriately. Mine is called _LITTLELINK_PORTAINER_WEBHOOK_.
 
 ## Creating a workflow file
 For this to work you will need to create a .github/workflows folder in your repository. In that folder you need a file ending in .yml. You can do this with 'touch' in your folder.
@@ -32,17 +53,6 @@ sudo nano webhook-call.yml
 Or to open VSCode from the directory you can write
 ```console
 code .
-```
-## What do we need the action to do?
-We need the action to check if there has been any changes to docker-compose.yml and, if yes, call the portainer webhook
-
-```mermaid
-flowchart TD
-    A[Git push to main] --> B[Change to docker-compose?]
-    B --> |Yes| C[Call webhook]
-    C --> |In Portainer| D[Redeploy docker-compose.yml]
-    D --> E[Finish job]
-    B --> |No| E[Finish job]
 ```
 ### Part one: Begin action on push to main
 For the Github Action to start itself when there is a push to the branch called 'main' we need to declare that with a few lines.

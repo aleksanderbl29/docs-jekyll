@@ -11,22 +11,33 @@ In this project i wanted to deploy a docker-compose file hosted on github and pr
 * Portainer BE
 * Docker environment
 * Github repo with docker-compose file
+
 ## Deploying the stack
-You should go to your environment.
-We will be working in "stacks" today.
+1. You should go to your environment.
+
+
+2. We will be working in "stacks" today.
+
 ![Light mode only](stacks-light.png){: .shadow .light}
 ![Dark mode only](stacks-dark.png){: .shadow .dark}
-Choose "add stack" in the top right corner.
 
-Then choose "Repository"
+3. Choose "add stack" in the top right corner.
+4. Then choose "Repository"
+
 ![Light mode only](git-add-stack-light.png){: .shadow .light}
 ![Dark mode only](git-add-stack-dark.png){: .shadow .dark}
-Then insert the url of your repository
+
+5. Then insert the url of your repository
+
 ![Light mode only](url-light.png){: .shadow .light}
 ![Dark mode only](url-dark.png){: .shadow .dark}
-Then insert the path of your docker-compose file from github
+
+6. Then insert the path of your docker-compose file from github
+
 ![Light mode only](path-light.png){: .shadow .light}
 ![Dark mode only](path-dark.png){: .shadow .dark}
-Then enable automatic updates and choose "webhook"
+
+7. Then enable automatic updates and choose "webhook"
+
 ![Light mode only](auto-light.png){: .shadow .light}
 ![Dark mode only](auto-dark.png){: .shadow .dark}

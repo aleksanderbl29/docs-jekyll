@@ -4,7 +4,7 @@ date: 2023-05-27 09:00:00 +0200
 categories: [Homelab, Portainer]
 tags: [homelab, learning, portainer, webhook]     # TAG names should always be lowercase
 mermaid: true
-img_path: aleksanderbl29.github.io/media/portainer-docker-compose-stack/
+img_path: /media/portainer-docker-compose-stack/
 ---
 In this project i wanted to deploy a docker-compose file hosted on github and prepare a webhook that i can call to redeploy the docker-compose file.
 ## What you'll need

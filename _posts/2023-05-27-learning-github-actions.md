@@ -39,13 +39,13 @@ For a later step, you will need to have secrets created with your webhook-urls i
 On this page you should fill in the webhook url for your service and name the secret appropriately. Mine is called _LITTLELINK_PORTAINER_WEBHOOK_.
 
 ## Creating a workflow file
-For this to work you will need to create a `.github/workflows`{: .filepath} folder in your repository. In that folder you need a file ending in `.yml`{: .filepath}. You can do this with 'touch' in your folder.
+For this to work you will need to create a `.github/workflows`{: .filepath} folder in your repository. In that folder you need a file ending in `.yml`{: .filepath}. You can do this with `touch` in your folder.
 ```console
 mkdir .github && cd .github
 mkdir workflows && cd workflows
 touch webhook-call.yml
 ```
-I dont't care how you edit the file, but I generally use either *nano* or Visual Studio Code.
+I dont't care how you edit the file, but I generally use either `nano` or Visual Studio Code.
 That's done with one of these commands in the directory
 ```console
 sudo nano webhook-call.yml
@@ -68,7 +68,7 @@ jobs:
 ```
 This tells Github what the name of the action is and when to start it. It also declares the job and the name of the job.
 ### Part two: Checking for changes to docker-compose.yml
-This part checks for any changes to any file in the folder called 'littlelink-server' that has the file-extension of .yml and prints the files to the output called 'docker-compose-changed.
+This part checks for any changes to any file in the folder called `littlelink-server`{: .filepath} that has the file-extension of `.yml`{: .filepath} and prints the files to the output called 'docker-compose-changed.
 ```yml
 runs-on: 'ubuntu-20.04'
     steps:
@@ -90,7 +90,7 @@ runs-on: 'ubuntu-20.04'
 ```
 I have drawn a lot of inspiration from [Gérald Barré's blog post on the subject](https://www.meziantou.net/executing-github-actions-jobs-or-steps-only-when-specific-files-change.htm).
 ### Part three: Call the webhook if the file has changed
-In this step, the action checks if the output 'docker-compose-changed' is true and then calls the webhook url. Here we have hidden the url in a secret as we did above. Change the name accordingly.
+In this step, the action checks if the output `docker-compose-changed` is true and then calls the webhook url. Here we have hidden the url in a secret as we did above. Change the name accordingly.
 ```yml
     # Run the step only if "docker-compose-changed" equals "True"
     - uses: joelwmale/webhook-action@2.3.2

@@ -39,7 +39,7 @@ For a later step, you will need to have secrets created with your webhook-urls i
 On this page you should fill in the webhook url for your service and name the secret appropriately. Mine is called _LITTLELINK_PORTAINER_WEBHOOK_.
 
 ## Creating a workflow file
-For this to work you will need to create a .github/workflows folder in your repository. In that folder you need a file ending in .yml. You can do this with 'touch' in your folder.
+For this to work you will need to create a `.github/workflows`{: .filepath} folder in your repository. In that folder you need a file ending in `.yml`{: .filepath}. You can do this with 'touch' in your folder.
 ```console
 mkdir .github && cd .github
 mkdir workflows && cd workflows

@@ -1,6 +1,6 @@
 ---
 title: Deploying a docker stack in portainer with webhooks for automatic updates
-date: 2023-05-27 90:00:00 +0200
+date: 2023-05-27 09:00:00 +0200
 categories: [Homelab, Portainer]
 tags: [homelab, learning, portainer, webhook]     # TAG names should always be lowercase
 mermaid: true

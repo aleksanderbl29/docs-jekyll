@@ -13,31 +13,35 @@ In this project i wanted to deploy a docker-compose file hosted on github and pr
 * Github repo with docker-compose file
 
 ## Deploying the stack
-1. You should go to your environment.
-
-
-2. We will be working in "stacks" today.
+You should go to your environment. We will be working in "stacks" today.
 
 ![Light mode only](stacks-light.png){: .shadow .light}
 ![Dark mode only](stacks-dark.png){: .shadow .dark}
 
-3. Choose "add stack" in the top right corner.
-4. Then choose "Repository"
+Choose "add stack" in the top right corner. Then choose "Repository"
 
 ![Light mode only](git-add-stack-light.png){: .shadow .light}
 ![Dark mode only](git-add-stack-dark.png){: .shadow .dark}
 
-5. Then insert the url of your repository
+Then insert the url of your repository
 
 ![Light mode only](url-light.png){: .shadow .light}
 ![Dark mode only](url-dark.png){: .shadow .dark}
 
-6. Then insert the path of your docker-compose file from github
+Then insert the path of your docker-compose file from github
 
 ![Light mode only](path-light.png){: .shadow .light}
 ![Dark mode only](path-dark.png){: .shadow .dark}
 
-7. Then enable automatic updates and choose "webhook"
+Then enable automatic updates and choose "webhook"
 
 ![Light mode only](auto-light.png){: .shadow .light}
 ![Dark mode only](auto-dark.png){: .shadow .dark}
+
+When you have copied your webhook url you can safely click deploy
+
+![Light mode only](deploy-light.png){: .shadow .light}
+![Dark mode only](deploy-dark.png){: .shadow .dark}
+
+## That's it!
+You now have a docker-compose file that redeploys itself when the webhook url is called.

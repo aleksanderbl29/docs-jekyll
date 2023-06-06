@@ -12,7 +12,7 @@ updates:
     rebase-strategy: "auto"
     reviewers:
       - aleksanderbl29
-    asignees:
+    assignees:
       - aleksanderbl29
     ignore:
     - dependency-name: "*"

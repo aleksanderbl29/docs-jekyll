@@ -10,8 +10,6 @@ updates:
     schedule:
       interval: "daily"
     rebase-strategy: "auto"
-    reviewers:
-      - aleksanderbl29
     assignees:
       - aleksanderbl29
     ignore:
